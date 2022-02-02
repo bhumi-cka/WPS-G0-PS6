@@ -1,0 +1,44 @@
+Python:
+  t=int(input())
+  for x in range(0,t):
+      n=int(input())
+      if (n%4==0):
+          ans=''
+          evenlist=[]
+          oddlist=[]
+          for i in range(0,int(n/2)):
+              evenlist.append(2*(i+1))
+          for j in range(0,int(n/2)):
+              oddlist.append((2*j)+1)
+          oddlist[-1]+=int(n/2)
+          li=evenlist+oddlist;
+          print('YES')
+          for ele in li:
+              ans+=str (ele)+" ";
+          print(ans)
+      else:
+          print('NO')
+          
+C++:
+  #include <iostream>
+  using namespace std;
+
+  int main() {
+      int t; cin>>t;
+      for (int y=0; y<t; y++) {
+      int n; cin>>n;
+      if (n%4==0) {
+      cout<<"YES"<<endl;
+      int arr[n];
+      for (int i=0; i<n/2; i++)
+          arr[i]=2*(i+1);
+      for (int j=n/2; j<n; j++)
+          arr[j]=(2*(j-(n/2)))+1;
+      arr[n-1]+=n/2;
+      for (int k=0; k<n; k++)  cout<<arr[k]<<" ";
+      cout<<endl;
+      }
+
+      else  cout<<"NO"<<endl;
+      }
+  }
