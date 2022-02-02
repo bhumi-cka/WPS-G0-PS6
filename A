@@ -1,0 +1,21 @@
+Python:
+  n=int(input())            			
+  cho=int(n/5)
+  w=cho
+  while (w>=5):
+      cho+=int(w/5)
+      w=w%5+int(w/5)
+  print(cho)
+
+C++:
+  #include <iostream>
+  using namespace std;
+  int main() {
+      int n;  cin>>n;
+      int cho=n/5;
+      int w=cho;
+      while (w>=5) {
+          cho+=w/5;
+          w=w%5 + w/5;
+      }
+      cout<<cho;
